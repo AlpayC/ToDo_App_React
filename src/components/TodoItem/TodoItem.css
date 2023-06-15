@@ -1,0 +1,30 @@
+.todo-item-container {
+  background-color: grey;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  border-radius: 2rem;
+  height: 10%;
+  width: 90%;
+  font-size: 2rem;
+}
+.done {
+  text-decoration: line-through;
+}
+
+.todo-item-container.done {
+  color: green;
+  text-decoration: line-through;
+}
+.checkbox {
+  width: 10%;
+  background-color: red;
+}
+.delete-btn {
+  background-color: rgb(88, 88, 223);
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+}

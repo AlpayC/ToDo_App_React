@@ -1,0 +1,5 @@
+.todo-list-container {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
