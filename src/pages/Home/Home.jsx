@@ -1,4 +1,5 @@
 import { AllTodosContext } from "../../assets/context/context";
+import { OpenTodosContext } from "../../assets/context/context";
 import reactLogo from "../../assets/react.svg";
 import TodoInput from "../../components/TodoInput/ToDoInput";
 import TodoItem from "../../components/TodoItem/TodoItem";
@@ -8,11 +9,15 @@ import "./Home.css";
 import { useContext, useState, useEffect } from "react";
 const Home = () => {
   const { allTodos, setAllTodos } = useContext(AllTodosContext);
+  const { openTodos, setOpenTodos } = useContext(OpenTodosContext);
 
+  console.log(openTodos);
   return (
     <>
       <h1>Website Todo</h1>
-      <h2>Anzahl Todos: {allTodos.length}</h2>
+      <h2>
+        Anzahl Todos: {allTodos.length} davon offen: {openTodos.length}
+      </h2>
       <TodoInput />
       <div className="todo-list-container">
         {allTodos.map((item, index) => (
